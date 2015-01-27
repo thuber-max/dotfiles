@@ -39,7 +39,9 @@ fi
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/git
 vew_path=$(which virtualenvwrapper.sh)
-source $vew_path
+if [ -f $vew_path ] ; then
+    source $vew_path
+fi
 
 # setup nice colors
 eval `dircolors ~/.dircolors`

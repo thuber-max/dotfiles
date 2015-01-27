@@ -28,12 +28,11 @@ cat ${SCRIPTPATH}/dircolors >> ~/.dircolors
 
 # set up my bash file
 cat ${SCRIPTPATH}/bashrc >> ~/.bashrc
+source ~/.bashrc
 
 # setup vim
 git clone https://github.com/thuber-max/vim-ide.git ~/.vim && \
 cd ~/.vim && \
 bash ~/.vim/setup_vim.sh
-
-source ~/.bashrc
 
 cd ${STARTDIR}
