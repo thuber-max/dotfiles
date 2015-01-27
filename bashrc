@@ -38,6 +38,7 @@ fi
 # python virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/git
+export EDITOR=vim
 vew_path=$(which virtualenvwrapper.sh)
 if [ -f $vew_path ] ; then
     source $vew_path
