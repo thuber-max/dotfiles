@@ -74,6 +74,51 @@ then
 fi
 
 export GREP_OPTIONS='--color=auto'
-alias ls='ls --color'
-export PS1="$(tput setaf 1)\w\n\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h\[$(tput setaf 5)\]\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$\[$(tput sgr0)\] "
+#export PS1="$(tput setaf 1)\w\n\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h\[$(tput setaf 5)\]\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$\[$(tput sgr0)\] "
+
+#COLORS
+#tput Color Capabilities:
+#
+#tput setab [1-7] – Set a background color using ANSI escape
+#tput setb [1-7] – Set a background color
+#tput setaf [1-7] – Set a foreground color using ANSI escape
+#tput setf [1-7] – Set a foreground color
+#tput Text Mode Capabilities:
+#
+#tput bold – Set bold mode
+#tput dim – turn on half-bright mode
+#tput smul – begin underline mode
+#tput rmul – exit underline mode
+#tput rev – Turn on reverse mode
+#tput smso – Enter standout mode (bold on rxvt)
+#tput rmso – Exit standout mode
+#tput sgr0 – Turn off all attributes
+#Color Code for tput:
+#
+#0 – Black
+#1 – Red
+#2 – Green
+#3 – Yellow
+#4 – Blue
+#5 – Magenta
+#6 – Cyan
+#7 – White
+
+
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+RESET=$(tput sgr0)
+
+GREYBG=$(tput dim; tput setab 7) 
+REDBG=$(tput dim; tput setab 1)
+
+
+export PS1="\[$RESET\]\n\[$GREEN\]\w\[$RESET\]\n\[$BOLD\]\[$MAGENTA\][\[$CYAN\]\u\[$PURPLE\]@\[$YELLOW\]\h\[$RESET\]\[$MAGENTA\]]\[$WHITE\]\\$\[$RESET\] "
+
 
